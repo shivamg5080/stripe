@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stripe Checkout</title>
+  <script src="https://js.stripe.com/v3/"></script>
+  <style>
+    #card-element {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .button {
+      background-color: #6772e5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Stripe Checkout Integration</h2>
+  <div class="form">
+    <h3>Register</h3>
+    <input type="email" id="register-email" placeholder="Email" required>
+    <input type="password" id="register-password" placeholder="Password" required>
+    <button id="register-button" class="button">Register</button>
+  </div>
+  <div class="form">
+    <h3>Login</h3>
+    <input type="email" id="login-email" placeholder="Email" required>
+    <input type="password" id="login-password" placeholder="Password" required>
+    <button id="login-button" class="button">Login</button>
+  </div>
+  <div id="card-element"></div>
+  <select id="plan">
+    <option value="plan_id_1">Plan 1</option>
+    <option value="plan_id_2">Plan 2</option>
+  </select>
+  <button id="checkout-button" class="button">Checkout</button>
+  <button id="subscribe-button" class="button">Subscribe</button>
+
+  <script src="/stripe-checkout/stripe.js"></script>
+</body>
+</html>
